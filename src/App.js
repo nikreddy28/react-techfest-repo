@@ -6,7 +6,8 @@ import {
   Home,
   Products,
   ProductDetails,
-  Cart
+  Cart,
+  About
 } from './demo';
 
 import configureStore from './store';
@@ -35,6 +36,7 @@ const App = () => (
         <Route path="/products" component={Products} />
         <Route path="/product/:id" component={ProductDetails}/>
         <Route path="/cart" component={Cart}/>
+        <Route path="/about" component={About}/>
       </div>
     </Router>
   </Provider>

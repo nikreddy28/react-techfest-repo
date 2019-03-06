@@ -4,6 +4,7 @@ import ProductTile from './ProductTile';
 import ProductDetails from './ProductDetails';
 import Category from './Category';
 import Cart from './Cart';
+import About from './About'
 
 
 export {
@@ -12,5 +13,6 @@ export {
     ProductTile,
     ProductDetails,
     Category,
-    Cart
+    Cart,
+    About
 }

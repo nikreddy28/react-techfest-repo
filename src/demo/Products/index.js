@@ -5,7 +5,7 @@ import ProductTile from '../ProductTile';
 import { Grid, Pagination, Icon } from 'semantic-ui-react'
 class ItemList extends Component {
     componentDidMount() {
-        this.props.fetchData('http://localhost:4567/api/product');   
+        this.props.fetchData('https://fest-be-angular-fest.7e14.starter-us-west-2.openshiftapps.com/api/product');   
     }
 
     constructor(props) {

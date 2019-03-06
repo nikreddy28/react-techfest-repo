@@ -8,7 +8,7 @@ import './index.scss';
 
 class ProductDetails extends Component {
     componentDidMount() {
-        this.props.fetchProductDetails(`http://localhost:4567/api/product/description/${this.props.match.params.id}`);    
+        this.props.fetchProductDetails(`https://fest-be-angular-fest.7e14.starter-us-west-2.openshiftapps.com/api/product/description/${this.props.match.params.id}`);    
     }
   
 
@@ -18,7 +18,7 @@ class ProductDetails extends Component {
       }
 
       handleClick(){
-        this.props.getProductData(`http://localhost:4567/api/product/${this.props.match.params.id}`);   
+        this.props.getProductData(`https://fest-be-angular-fest.7e14.starter-us-west-2.openshiftapps.com/api/product/${this.props.match.params.id}`);   
       }
       render() {
 
