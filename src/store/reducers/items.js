@@ -32,39 +32,3 @@ export function productDetails(state = {}, action) {
     }
 }
 
-export function cartDetails(state = [], action) {
-    switch (action.type) {
-        case 'PRODUCT_CART_DATA_SUCCESS':
-            if(state.length>0){
-            var match = false;
-            var updatedItems = state.map(item => {
-                if(item.id === action.id){
-                match = true
-                action.productData.qty =  item.qty+1;
-                return { ...item, ...action.productData }
-                
-                }
-                return item
-            })
-
-            if(match==true){
-                return updatedItems
-            }else{
-                return [...state, action.productData]
-            }
-            
-            }else{
-                return [action.productData]
-            }
-
-        case 'PRODUCT_DELETE_SUCCESS': 
-            var temp = state.filter(item => {
-                return item.id !== action.id;
-            })
-
-            return temp;
-
-        default:
-            return state;
-    }
-}

@@ -1,18 +1,14 @@
 import Home from './Home';
-import Products from './Products';
-import ProductTile from './ProductTile';
-import ProductDetails from './ProductDetails';
-import Category from './Category';
-import Cart from './Cart';
-import About from './About'
+import Articles from './Articles';
+import ArticleTile from './ArticleTile';
+import ArticleDetails from './ArticleDetails';
+import NavHeader from "./Header";
 
 
 export {
     Home,
-    Products,
-    ProductTile,
-    ProductDetails,
-    Category,
-    Cart,
-    About
+    Articles,
+    ArticleTile,
+    ArticleDetails,
+    NavHeader
 }

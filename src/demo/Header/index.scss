@@ -1,0 +1,37 @@
+.cart-size{
+    color: red;
+    position: absolute;
+    top: 4px;
+    right: 59px;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.header-wrapper{
+    background-color: #1A324B;
+    margin: 0px;
+    padding: 10px 60px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 1000;   
+}
+.header-wrapper .sub.header {
+    color:#F3993E !important;
+}
+.keyword{
+    display: inline-block;
+    position: relative;
+    right: 75px;
+    top: 10px;
+    color: #F3993E !important;
+}
+.keyword-icon{
+    width:48px;
+}
+
+.search-icon{
+    position: absolute;
+    right: 0px;
+    top: 6px;
+}
