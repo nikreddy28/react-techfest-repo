@@ -58,12 +58,17 @@ class Home extends React.Component {
 
  
     render() {
+
+        var temp = this.props.pageDetails[':items'];
+        var header = (temp && temp['root'][':items']['portal_container'][':items']['text']['text'])
+        var footer = (temp && temp['root'][':items']['portal_container'][':items']['contentfragment']['text'])
         return (
             <React.Fragment>
          
                 <div className="content-wrapper">
                         <div className="search-wrapper">
-                                    <h1 className="title-heading-left">Find, Reach, and Resolve your concerns with Knowledge Base Articles</h1>
+                        <div />
+                                    <h1 className="title-heading-left" dangerouslySetInnerHTML={{ __html: header }} ></h1>
                                     <div className="kb-filter-container">
                                     <div className="autocompleteWrapper">
                                         <div className="input-group">
@@ -84,7 +89,7 @@ class Home extends React.Component {
 
             <section className="row alert-container">
                 <div className="col-12 alert alert-warning alert-dismissible fade show" role="alert">
-                    <strong className="section-header">NOTE: </strong> <span className="body-text">Do you have feedback, ideas, or questions on Amazon Does That?</span>
+                    <strong className="section-header">NOTE: </strong> <span className="body-text"  dangerouslySetInnerHTML={{ __html: footer }} ></span>
                     <button type="button" className="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -96,6 +101,7 @@ class Home extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state.pageDetails);
     return {
         items: state.items,
         hasErrored: state.itemsHasErrored,
