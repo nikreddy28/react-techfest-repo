@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { Icon } from 'semantic-ui-react'
 
 
 import './index.scss'; 
@@ -9,12 +10,16 @@ import './index.scss';
 class ArticleTile extends React.Component {
 
     render() {
-        const id= this.props.product.id;
         return (
             <React.Fragment>
-            <Link to={`/product/${id}`} >
-                {this.props.product.name}
-           </Link>
+            <div className="article-tile">
+                <Link to={`/`} >
+                        {this.props.product['jcr:title']}
+                </Link>
+                <p><Icon name='sync' />{this.props.product['articleType']}</p>
+                <p>Last Updated : {this.props.product['cq:lastModified']} </p>
+                <p className="article-body">{this.props.product['articleBody']}</p>
+           </div>
            </React.Fragment>
           
         );

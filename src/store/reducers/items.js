@@ -32,3 +32,12 @@ export function productDetails(state = {}, action) {
     }
 }
 
+export function pageDetails(state = {}, action) {
+    switch (action.type) {
+        case 'PAGE_FETCH_DATA_SUCCESS':
+            return action.items;
+        default:
+            return state;
+    }
+}
+

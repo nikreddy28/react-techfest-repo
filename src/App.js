@@ -16,7 +16,7 @@ const App = () => (
       <div>
         <NavHeader></NavHeader>
         <Route exact path="/" component={Home} />
-        <Route path="/product/:id" component={ArticleDetails}/>
+        <Route path="/article/:id" component={ArticleDetails}/>
       </div>
     </Router>
   </Provider>

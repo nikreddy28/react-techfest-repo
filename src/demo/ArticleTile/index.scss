@@ -22,3 +22,37 @@
 .ui.pagination.menu {
     float: right;
 }
+
+.prod-title{
+    color: gray !important;
+    font-size: 16px;
+    margin-top:40px !important;
+}
+.article-tile{
+    border-bottom:1px solid gray;
+    padding:5px 20px;
+
+}
+
+.article-tile a{
+    color:#0070d2;
+}
+.article-tile p{
+    color: #00396b !important;
+    padding: 5px 0px;
+    margin-bottom: 0px;
+}
+
+.article-body{
+    padding: 10px 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+}
+
+.articles-wrapper{
+    background: #F7F7F7;
+    margin: 100px 0px;
+    
+    } 

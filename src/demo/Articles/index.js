@@ -6,10 +6,6 @@ import PropTypes from 'prop-types';
 import { Grid, Pagination} from 'semantic-ui-react'
 
 class ItemList extends Component {
-    // componentDidMount() {
-    //     this.props.fetchData('https://fest-be-angular-fest.7e14.starter-us-west-2.openshiftapps.com/api/product');   
-    // }
-
     constructor(props) {
         super(props);
         this.state = {
@@ -33,18 +29,18 @@ class ItemList extends Component {
         // Logic for displaying current products
       const indexOfLastproduct = currentPage * productsPerPage;
       const indexOfFirstproduct = indexOfLastproduct - productsPerPage;
-      const currentproducts = this.props.items.slice(indexOfFirstproduct, indexOfLastproduct);
+      const currentproducts = this.props.items.hits && this.props.items.hits.slice(indexOfFirstproduct, indexOfLastproduct);
 
-      const renderproducts = currentproducts.map((product) => {
+      const renderproducts = currentproducts && currentproducts.map((product) => {
         return (
-            <Grid.Column key ={product.id}>
+            <Grid.Column key ={product.path}>
                     <ArticleTile product={product} ></ArticleTile>
             </Grid.Column>
         )
       });
         // Logic for displaying page numbers
         const pageNumbers = [];
-        for (let i = 1; i <= Math.ceil(this.props.items.length / productsPerPage); i++) {
+        for (let i = 1; i <= Math.ceil(this.props.items.total / productsPerPage); i++) {
           pageNumbers.push(i);
         }
 
@@ -54,11 +50,11 @@ class ItemList extends Component {
         if (this.props.isLoading) {
             return <p>Loading…</p>;
         }
-        if (this.props.items.length) {
+        if (this.props.items.total) {
         return (
             
             <React.Fragment>
-                <h3 className="prod-title">{this.props.items.length} search results found</h3> 
+                <h3 className="prod-title">{this.props.items.total} search results found</h3> 
                 <ul>                   
                             {renderproducts}                                      
                 </ul>
@@ -90,5 +86,5 @@ ItemList.propTypes = {
     isLoading: PropTypes.bool,
     hasErrored:  PropTypes.bool,
     fetchData : PropTypes.func,
-    items : PropTypes.array
+    items : PropTypes.object
 }
