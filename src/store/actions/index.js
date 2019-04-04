@@ -1,8 +1,8 @@
 import axios from 'axios';
-
-
-
-
+ 
+ 
+ 
+ 
 export function itemsHasErrored(bool) {
     return {
         type: 'ITEMS_HAS_ERRORED',
@@ -21,15 +21,15 @@ export function itemsFetchDataSuccess(items) {
         items
     };
 }
-
-
-
+ 
+ 
+ 
 export function itemsFetchData(url) {
     return (dispatch) => {
         dispatch(itemsIsLoading(true));
         axios.get(url)
             .then(response => {
-
+ 
                 var dummydata = {
                     "total": "222",
                     "hits": [{
@@ -162,7 +162,7 @@ export function itemsFetchData(url) {
                         "path": "/content/amazon/us/en/articles/policy/family-medical-leave-act-fmla-leave-of-absence",
                         "articleStatus": "new",
                         "lastModified": "3 Apr 2019"
-                    }, {
+                   }, {
                         "articleVisibility": "all-erc",
                         "jcr:createdBy": "ppriya",
                         "jcr:title": "Jury Service Leave ROI",
@@ -180,7 +180,7 @@ export function itemsFetchData(url) {
                         "timeKeeping": ["timesheets", "mytime", "salaried", "workforce-ready"],
                         "hrSupport": ["hrbp", "manager", "hrc", "local-hr", "agency-s-hr-team"],
                         "businessGroup": ["fulfillment-center", "customer-service", "aws-cs", "aws", "fresh", "pantry", "primenow", "seller-support-l1-3", "seller-support-l4", "sortation-center", "treasure-truck", "amazon-books-corporate", "amazon-books-ops", "amazon-logistics---amzl", "amazon-go", "primeair", "twitch", "zappos", "tenmarks", "shopbop", "fabric", "audible", "amazon-pick-up", "central-ops", "temp--contingent-worker", "corporate"],
-                        "containsAttachment": false,
+                       "containsAttachment": false,
                         "articleBody": "Overview This article explains Jury Service Leave for associates in Ireland.",
                         "overview": "Overview This article explains Jury Service Leave for associates in Ireland.",
                         "language": "en",
@@ -302,55 +302,65 @@ export function itemsFetchData(url) {
             });
     };
 }
-
+ 
 export function productDetailsSuccess(productDetails) {
     return {
         type: 'PRODUCT_DETAILS_DATA_SUCCESS',
         productDetails
     };
 }
-
-
-
+ 
+ 
+ 
 export function fetchProductDetails(url) {
     return (dispatch) => {
         axios.get(url)
             .then(response => {
                 /* dispatch(itemsIsLoading(false));*/
-                dispatch(productDetailsSuccess(response.data)) 
+                dispatch(productDetailsSuccess(response.data))
             })
             .catch(() => {
-                
+ 
             });
     };
 }
-
-
+ 
+ 
 export function articlesFetchData(url,data) {
     return (dispatch) => {
         dispatch(itemsIsLoading(true));
+        console.log(data);
+        let formData = getFormData(data);
+        console.log(formData);
         axios({
             method: 'post',
             url: url,
-            data: data,
+            data: formData,
             headers: {
                 'content-type':  'application/x-www-form-urlencoded; charset=UTF-8',
                 },
-           
+ 
             })
             .then(response => {
                 dispatch(itemsIsLoading(false));
                // dispatch(itemsFetchDataSuccess(response.data))
                 dispatch(itemsFetchDataSuccess(response.data))
-                
+ 
             })
             .catch(() => {
                 dispatch(itemsHasErrored(true))
             });
     };
 }
-
-
+ 
+export function getFormData(item) {
+    const formData = new FormData();
+    for ( var key in item ) {
+    formData.append(key, item[key]);
+}
+    return formData;
+}
+ 
 export function FetchPageData(url) {
     return (dispatch) => {
         axios.get(url)
@@ -402,18 +412,17 @@ export function FetchPageData(url) {
                     ":itemsOrder": ["root"],
                     ":type": "weretail/components/structure/xfpage"
                 }
-                dispatch(pageDetailsSuccess(dummyContent)) 
+                dispatch(pageDetailsSuccess(dummyContent))
             })
             .catch(() => {
-                
+ 
             });
     };
 }
-
+ 
 export function pageDetailsSuccess(items) {
     return {
         type: 'PAGE_FETCH_DATA_SUCCESS',
         items
     };
 }
-

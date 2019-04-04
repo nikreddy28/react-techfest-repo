@@ -60,14 +60,19 @@ class Home extends React.Component {
     render() {
         return (
             <React.Fragment>
-             <Grid columns='equal'>
-                <Grid.Column width={16}>
+         
                 <div className="content-wrapper">
                         <div className="search-wrapper">
                                     <h1 className="title-heading-left">Find, Reach, and Resolve your concerns with Knowledge Base Articles</h1>
-                                    <div className="input-group">
-                                        <input className="form-control autocompleteInput" type="text" placeholder="Search here" id="autocompleteInput" ref={node => (this.inputNode = node)} onKeyPress={this._handleKeyPress}/>
-                                        <span className="input-group-text"><a className="search-icon" > <Icon  name="search" onClick={this.handleClick.bind(this)} className="trash-icon cursor-ptr"/></a></span>
+                                    <div className="kb-filter-container">
+                                    <div className="autocompleteWrapper">
+                                        <div className="input-group">
+                                            <input className="form-control autocompleteInput" type="text" placeholder="Search here" id="autocompleteInput" ref={node => (this.inputNode = node)} onKeyPress={this._handleKeyPress}/>
+                                            <span className="input-group-text"  id="inputGroupPrepend3">
+                                                <a className="search-icon" > <Icon  name="search" onClick={this.handleClick.bind(this)} className="trash-icon cursor-ptr"/></a>
+                                            </span>
+                                        </div>
+                                    </div>
                                     </div>
                         </div>
 
@@ -75,8 +80,7 @@ class Home extends React.Component {
                             <Articles></Articles>
                         </div>  
                 </div>
-                </Grid.Column>
-            </Grid>
+          
 
             <section className="row alert-container">
                 <div className="col-12 alert alert-warning alert-dismissible fade show" role="alert">
