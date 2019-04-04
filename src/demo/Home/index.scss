@@ -1,146 +1,176 @@
-.wrapper-pad{
-    padding: 20px 80px;
-    background-color: #f5eede;
-    background-image: url(https://try.alexa.com/wp-content/uploads/2016/12/pattern_bw_reverse.png);
-    background-position: left center;
-    background-repeat: no-repeat;
-    padding-top: 20px;
-    padding-right: 30px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    min-height: 400px;
-    height:auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.content-wrapper{
-    margin-top:80px;
-    height: 85vh;
-}
-.right-float{
-    float:right;
-}
-.prod-title{
-    display: inline-block;
-    padding-left: 40px;
-    text-transform: uppercase;
-}
-.align-right{
-    float: right;
-}
-.cursor-ptr{
-    cursor: pointer;
-}
-
-.cart_link{
-    float: right;
-    padding-right: 60px;
-}
-.inline-ele{
-    display: inline-block;
-}
-
-.search-wrapper{
-
-    /* max-width: 960px; */
-    margin: 0 auto;
-    position: relative;
-    z-index: 10;
-    text-align: center;
-}
-
-.search-wrapper h2{
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: 0px;
-    font-style: normal;
-    font-family: "roboto", Arial, Helvetica, sans-serif !important;
-}
- 
-.search-wrapper strong{
-    font-weight:700; 
-}
-.input-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 550px;
-    margin: 0 auto;
-}
-.autocompleteInput {
-    padding-left: 10px;
-    padding-right: 10px;
-    border: solid 1px #d8dde6;
-    border-radius: 4px;
-    background-color: #fff;
-    padding: 7px 40px 7px 20px;
-    font-family: 'AmazonEmber-Regular';
-    font-size: 13px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #54698d;
-    position: relative;
-    flex: 1 1 auto;
-    width: 1%;
-    margin-bottom: 0;
-}
-
-.content-wrapper{
-    background-color: #ffffff;
-background-image: url(https://try.alexa.com/wp-content/uploads/2016/12/Hero_Image_00000.jpg);
-background-position: left bottom;
-background-repeat: no-repeat;
-padding-top: 100px;
-/* padding-right: 30px; */
-padding-bottom: 200px;
-/* padding-left: 30px; */
-border-top-width: 0px;
-border-bottom-width: 0px;
-border-color: #eae9e9;
-border-top-style: solid;
-border-bottom-style: solid;
-
-}
-
-.title-heading-left{
-    color: #F5EEDE !important;
-    font-family: "roboto", Arial, Helvetica, sans-serif !important;
-}
-.title-heading-left strong {
-    font-weight: 700 !important;
-    font-size: 32px;
-}
-.search-wrapper h1{
-    padding-bottom: 3px !important;
-    color: #F5EEDE !important;
-    font-weight: 300;
-}
-
-.alert-container .alert-warning {
+.kbpanel-container .kb-filter-container , .kbpanel-container .kb-result-container{
+    background-color: transparent;
+    padding: 0px 0px;
+    border-bottom: 0px;
+  }
+  
+  .kbpanel-container{
+    background-color: transparent;
+    border: none;
+  }
+  
+  .kbpanel-container .kb-result-container .spinner-container{
+    display:none;
+  }
+  
+  .xf-web-container .cq-dd-fragment{
     color: #333;
     background-color: #ffe082;
     border-color: #ffeeba;
     padding:20px;
-}
-
-.alert-container{
- position: relative;
-}
-
-.alert-dismissible .close {
-    position: absolute;
-    top: 10px;
-    right: 0;
-    padding: .75rem 1.25rem;
-    color: inherit;
-    background: none;
-    border: none;
-    font-weight: 700;
-}
-
+  }
+  
+  .kbpanel-container .kb-filter-container .advance-search{
+    display: none;
+  }
+  
+  .wrapper-pad{
+      padding: 20px 80px;
+      background-color: #f5eede;
+      background-image: url(https://try.alexa.com/wp-content/uploads/2016/12/pattern_bw_reverse.png);
+      background-position: left center;
+      background-repeat: no-repeat;
+      padding-top: 20px;
+      padding-right: 30px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      min-height: 400px;
+      height:auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .content-wrapper{
+      padding-top:80px!important;
+      height: 100vh;
+  }
+  .right-float{
+      float:right;
+  }
+  .prod-title{
+      display: inline-block;
+      padding-left: 40px;
+      text-transform: uppercase;
+  }
+  .align-right{
+      float: right;
+  }
+  .cursor-ptr{
+      cursor: pointer;
+  }
+  
+  .cart_link{
+      float: right;
+      padding-right: 60px;
+  }
+  .inline-ele{
+      display: inline-block;
+  }
+  
+  .search-wrapper{
+  
+      /* max-width: 960px; */
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+      text-align: center;
+  }
+  
+  .search-wrapper h2{
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: 0px;
+      font-style: normal;
+      font-family: "roboto", Arial, Helvetica, sans-serif !important;
+  }
+  
+  .search-wrapper strong{
+      font-weight:700;
+  }
+  .input-group {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      width: 550px;
+      margin: 0 auto;
+  }
+  .autocompleteInput {
+      padding-left: 10px;
+      padding-right: 10px;
+      border: solid 1px #d8dde6;
+      border-radius: 4px;
+      background-color: #fff;
+      padding: 7px 40px 7px 20px;
+      font-family: 'AmazonEmber-Regular';
+      font-size: 13px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #54698d;
+      position: relative;
+      flex: 1 1 auto;
+      width: 1%;
+      margin-bottom: 0;
+  }
+  
+  .content-wrapper{
+      background-color: #ffffff;
+        background-image: url(https://try.alexa.com/wp-content/uploads/2016/12/Hero_Image_00000.jpg);
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        padding-top: 100px;
+        /* padding-right: 30px; */
+        padding-bottom: 200px;
+        /* padding-left: 30px; */
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+        border-color: #eae9e9;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        position: relative;
+  
+  }
+  
+  .title-heading-left{
+      color: #F5EEDE !important;
+      font-family: "roboto", Arial, Helvetica, sans-serif !important;
+      text-align: center;
+  }
+  .title-heading-left strong {
+      font-weight: 700 !important;
+      font-size: 32px;
+  }
+  .search-wrapper h1{
+      padding-bottom: 3px !important;
+      color: #F5EEDE !important;
+      font-weight: 300;
+  }
+  
+  .alert-container .alert-warning {
+      color: #333;
+      background-color: #ffe082;
+      border-color: #ffeeba;
+      padding:20px;
+  }
+  
+  .alert-container{
+   position: absolute;
+   bottom:0;
+   width:100%;
+  }
+  
+  .alert-dismissible .close {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      padding: .75rem 1.25rem;
+      color: inherit;
+      background: none;
+      border: none;
+      font-weight: 700;
+  }
+  
