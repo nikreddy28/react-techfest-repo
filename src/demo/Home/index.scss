@@ -124,7 +124,7 @@
         background-repeat: no-repeat;
         padding-top: 100px;
         /* padding-right: 30px; */
-        padding-bottom: 200px;
+        //padding-bottom: 200px;
         /* padding-left: 30px; */
         border-top-width: 0px;
         border-bottom-width: 0px;
@@ -139,6 +139,7 @@
       color: #F5EEDE !important;
       font-family: "roboto", Arial, Helvetica, sans-serif !important;
       text-align: center;
+      margin-top:40px!important;
   }
   .title-heading-left strong {
       font-weight: 700 !important;
@@ -158,7 +159,7 @@
   }
   
   .alert-container{
-   position: absolute;
+   position: fixed;
    bottom:0;
    width:100%;
   }
